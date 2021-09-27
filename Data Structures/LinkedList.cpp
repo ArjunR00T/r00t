@@ -13,6 +13,7 @@ void remove(struct Node* head,int p);
 void rev(struct Node* head);
 void recPrint(struct Node *head);
 struct Node* recReverse(struct Node* head);
+struct Node* insertAtpos(struct Node* head);
 
 
 
@@ -106,6 +107,25 @@ void rev(struct Node* head){
     
 }
 
+struct Node* insertAtpos(struct Node* head,data,n){
+    int i;
+    struct Node* temp1=(struct Node*) malloc(sizeof(struct Node));
+    temp1->data=data;
+    temp1->next=NULL;
+    if(n==1)
+    {
+        temp1->next=head;
+        head=temp1;
+    }
+        struct Node* temp2=head;
+        for(i=0;i<n-2;i++)
+        {
+            temp2=temp2->next;
+        }
+        temp1->next=temp2->next;
+        temp2->next=temp1;
+    return head;
+}
 void recPrint(struct Node* p){
     
     if(p==NULL) return;
