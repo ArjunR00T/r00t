@@ -28,11 +28,10 @@ int main(){
     printf("Position to Delete: ");
     scanf("%d",&d);
     remove(head,d);
-    //printf("Forward Recursive Printing: \n");
-   // recPrint(head);
+    printf("Forward Recursive Printing: \n");
+    recPrint(head);
     printf("Recursive Reversing : \n");
     head=recReverse(head);
-   // printf("%d",head->data);
     disp(head);
     
     return 0;
