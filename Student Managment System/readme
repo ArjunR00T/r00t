@@ -1,6 +1,6 @@
 Setup your MySQL databse:
 
 1 -> Create Database studentmanagement
-2 -> Create Table details.For table configuration,please the refer the above image(db.png)
+2 -> Create Table named "details".For table configuration,please the refer the above image(db.png)
 
 That's It!
